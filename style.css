@@ -1,0 +1,408 @@
+html,body {
+  height:100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+  color: #3C4043;
+  }
+h2{
+  font-weight: 300;
+  font-size: 35px;
+  margin: 5px 0px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  background-color: #333;
+  width: 100%;
+  margin-bottom: 20px;
+}
+label{
+  font-size: 14px;
+  font-weight: 300;
+}
+input[type='text'], textarea{
+  border: 1px solid #333;
+  border-radius: 2px;
+  width: 300px;
+  margin: 5px 0px;
+}
+form > input[type='text']{
+    display: block;
+}
+input[type='text'] {
+  height: 20px;
+}
+input[type='submit'], button{
+  border: none;
+  font-size: 16px;
+  background-color: #80B80F;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+p{
+  font-weight: 300;
+}
+header > h1 {
+  padding: 20px 0px;
+  font-size: 70px;
+  margin-top: 0px;
+  text-align: center;
+  font-weight: bold;
+  color: #80B80F;
+  font-family: 'Pacifico', sans-serif;
+}
+.post > ul, .nav > ul {
+  display: block;
+  padding-left: 0px;
+  text-align: center;
+  margin: auto;
+}
+.nav > ul {
+  margin-top: 50px;
+}
+.post > ul > li, .nav > ul > li{
+  display: inline;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+input::-webkit-input-placeholder {
+	color: rgb(143, 143, 143);
+	text-transform: uppercase;
+  padding-left: 5px;
+}
+input::-moz-placeholder {
+	color: rgb(143, 143, 143);
+	text-transform: uppercase;
+  padding-left: 5px;
+}
+input:-moz-placeholder {   /* Older versions of Firefox */
+	color: rgb(143, 143, 143);
+	text-transform: uppercase;
+  padding-left: 5px;
+}
+input:-ms-input-placeholder {
+	color: rgb(143, 143, 143);
+	text-transform: uppercase;
+  padding-left: 5px;
+}
+.post > ul > li > input{
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 5px;
+  width:100px;
+}
+i{
+  margin-right: 5px;
+}
+.bottombar > p {
+  font-size: 14px;
+}
+.bottombar> p > i {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+.bottombar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img{
+  display: inline;
+  max-width: 100%;
+}
+.post{
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  background-color: rgb(222, 222, 222);
+  margin: 5px;
+}
+.left {
+  flex: 0 0 20%;
+}
+.right {
+  flex: 0 0 78%;
+  margin-left: 2%;
+}
+.right > p {
+  font-size: 14px;
+}
+.right > h3 {
+  margin-top: 0px;
+  margin-right: 15px;
+  font-weight: 400;
+}
+.right > h4 {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.ng-enter-stagger, .ng-leave-stagger {
+  transition-delay: 0.2s;
+  transition-duration:0;
+}
+
+.ng-enter,
+.ng-leave,
+.ng-move
+{
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+
+.ng-enter.ng-enter-active,
+.ng-leave{
+    opacity: 1;
+    top: 0;
+}
+
+.ng-leave.ng-leave-active,
+.ng-enter {
+    opacity: 0;
+    top: -100px;
+}
+.ng-move.ng-move-active {
+  opacity: 1;
+}
+.ng-move {
+    position: relative;
+    top: 26px;
+}
+
+.ng-move.ng-move-active {
+    transition: all 0.5s ease;
+    top: 0;
+}
+.messageText.ng-hide-remove, .commentlist.ng-hide-remove{
+  transition: 0.3s linear all;
+  }
+.messageText.ng-hide-add, .commentlist.ng-hide-add{
+  transition: 0.3s linear all;
+  }
+.messageText.ng-hide-add, .commentlist.ng-hide-add  {
+  opacity: 1;
+}
+.messageText.ng-hide-add.ng-hide-add-active, .commentlist.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+}
+.messageText.ng-hide-remove, .commentlist.ng-hide-remove  {
+  opacity: 0;
+}
+.messageText.ng-hide-remove.ng-hide-remove-active, .commentlist.ng-hide-remove.ng-hide-remove-active  {
+  opacity: 1;
+}
+
+.mainContent.ng-hide-remove{
+  transition: 0.3s linear all;
+  }
+.mainContent.ng-hide-add{
+  transition: 0.3s linear all;
+  }
+.mainContent.ng-hide-add {
+  opacity: 1;
+}
+.mainContent.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+}
+.mainContent.ng-hide-remove {
+  opacity: 0;
+}
+.mainContent.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.sideContent{
+  flex: 0 0 15%;
+  background-color: #FF10A8;
+  min-height: 80vh;
+}
+.sideContent > img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sideContent > p, .sideContent > h3 {
+  text-align: center;
+  color: white;
+}
+.sideContent > h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.sideContent > p {
+  font-size: 14px;
+}
+.mainContent{
+  flex: 0 0 50%;
+  overflow: auto;
+}
+.messageContent{
+  flex: 0 0 35%;
+  min-height: 80vh;
+}
+.avatar {
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+}
+.inline {
+  display: inline;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.commentlist{
+  margin-top: 20px;
+  background: white;
+  padding: 10px;
+}
+.commentlist > h3 {
+  margin-top: 0px;
+}
+.comment {
+  border-left: 6px solid #1DACF6;
+  padding-left: 10px;
+}
+.comment > p {
+  font-size: 12px;
+}
+.comment > h4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+.addComment {
+  padding-top: 20px;
+}
+.commentForm, .postForm {
+  background-color: white;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+.overlay{
+    opacity:1;
+    background-color:rgba(123,123,123, .7);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    display: flex;
+    align-items: center;
+}
+.closeButton {
+  display: block;
+  float: right;
+}
+.commentLabel {
+  display: block;
+  clear: right;
+}
+.error > p{
+  color: red;
+  font-size: 12px;
+}
+.collapse {
+  margin-left: 0px;
+}
+.blueback {
+  background-color: #1DACF6;
+}
+.message {
+  background-color: white;
+  padding: 10px;
+  margin: 5px 0px;
+  width: 100%;
+}
+.message > h3 {
+  font-size: 14px;
+  display: inline;
+}
+.messageText > h4 {
+  font-size: 14px;
+  font-weight: 400;
+  float: left;
+  margin: 10px auto;
+}
+.messageText > h6 {
+  font-size: 12px;
+  font-weight: 400;
+  float: right;
+  display: inline;
+  margin: 10px auto;
+}
+.messageText > p {
+  font-size: 12px;
+  clear: both;
+}
+.fromMessage{
+  border-left: 6px solid #1DACF6;
+  padding-left: 5px;
+}
+.toMessage {
+  border-right: 6px solid #FF10A8;
+  text-align: right;
+  padding-right: 5px;
+}
+.message > i {
+  float: right;
+  display: inline;
+  margin-top: 5px;
+}
+.delete {
+  background-color: rgb(207, 71, 71);
+}
+.block {
+  display: block;
+}
+.nav > ul >li{
+  display: block;
+  color: white;
+}
+.plus{
+  width: 12px;
+  height: auto;
+  padding-right: 5px;
+}
+.ex{
+  width: 12px;
+  height: auto;
+  padding-right: 5px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.space {
+  padding-left: 10px;
+}
+.corner {
+  float: right;
+  display: inline-block;
+}

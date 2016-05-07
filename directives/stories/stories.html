@@ -1,0 +1,49 @@
+<div class='mainContent' ng-hide='feedOff'>
+  <div class='post blueback block'>
+    <h2>Stories</h2>
+    <ul>
+      <li ng-click="submitSwitch()"><img class='plus' src="http://www.km4city.org/png/512/android-add.png" alt="">Make a Post</li>
+      <li><input type="text" placeholder="Search" ng-model="search"></li>
+    </ul>
+  </div>
+  <div class='post'  ng-repeat='post in posts | orderBy:"-rating" | filter: search'>
+    <div class='left'>
+      <img ng-src="{{ post.photo }}" alt="">
+    </div>
+    <div class='right'>
+      <h3 class='inline'>{{ post.name }}</h3>
+      <p class='inline'><i class="fa fa-heart fa-lg" ng-click='upvote(post.id)'></i></i><span ng-class='{red: post.rating < 0, green: post.rating > 0}'>{{ post.rating }}</span></p>
+      <h4>{{ post.author}}</h4>
+      <p>{{ post.description }}</p>
+    </div>
+    <div class='bottombar'>
+      <p class='inline'><i class="fa fa-calendar"></i>{{ post.time | amCalendar}}</p>
+      <p class='inline' ng-click='showComments(post.id)'><i class="fa fa-comment"></i>
+        <ng-pluralize count="post.comments.length"
+             when="{'0': '{} Comments',
+                    '1': '{} Comment',
+                   'other': '{} Comments'}">
+        </ng-pluralize></p>
+      <p class='inline' ng-click='showAddComment(post.id)'><img class='plus space' src="http://www.km4city.org/png/512/android-add.png" alt=""></i>Add a comment</p>
+    </div>
+      <div  class='commentlist' ng-hide="!post.isShowing">
+        <i class="fa fa-close closeButton" ng-click='closeComments(post.id)'></i>
+        <h3>Comments</h3>
+        <div  class='comment' ng-repeat='comment in post.comments'>
+          <p class='corner'>{{ comment.time | date: 'fullDate'}}</p>
+          <p class='commentLabel'>{{ comment.text }}</p>
+          <h4>{{ comment.name }}</h4>
+        </div>
+      </div>
+      <div class='addComment overlay' ng-show='post.isAddShowing'>
+        <form class='commentForm' ng-submit='submitComment(post.id, comment)'>
+          <img class='ex closeButton' ng-click='closePost(pos.id)' src="http://www.km4city.org/png/512/android-add.png" alt="">
+          <label for="commentName" class="commentLabel"> Name</label>
+          <input name="commentName" type="text" ng-model='comment.name'>
+          <label for="comment" class="commentLabel">Comment</label>
+          <textarea name="comment" type="text" ng-model='comment.text' rows='5' col='15'></textarea>
+          <input type="submit" value='Add Comment'>
+        </form>
+      </div>
+  </div>
+</div>

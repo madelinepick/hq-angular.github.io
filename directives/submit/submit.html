@@ -1,0 +1,26 @@
+<div class='mainContent overlay' ng-hide='submitOff'>
+  <form name='postForm'  novalidate ng-submit='submitForm();submitSwitch()'class='postForm'>
+    <img class='ex closeButton' ng-click='closePost(pos.id)' src="http://www.km4city.org/png/512/android-add.png" alt="">
+    <label for="name" class="commentLabel">Title</label>
+    <input name="name" type="text" ng-model='submitName' minlength='5' required>
+    <div class='error' ng-messages='postForm.name.$error' ng-if="postForm.name.$touched">
+      <p ng-message="required">You did not include a title</p>
+    </div>
+    <label for="author" class="commentLabel">Author</label>
+    <input name="author" type="text" ng-model='submitAuthor' required>
+    <div class='error' ng-messages='postForm.author.$error' ng-if="postForm.author.$touched">
+      <p ng-message="required">You did not include an author</p>
+    </div>
+    <label for="desc" class="commentLabel">Description</label>
+    <textarea name="desc" type="text" ng-model='submitDescription' rows='10' required></textarea>
+    <div class='error' ng-messages='postForm.desc.$error' ng-if="postForm.desc.$touched">
+      <p ng-message="required">You did not include a description</p>
+    </div>
+    <label for="picture" class="commentLabel">Picture URL</label>
+    <input name="picture" type="text" ng-model='submitPicture' required>
+    <div class='error' ng-messages='postForm.picture.$error' ng-if="postForm.picture.$touched">
+      <p ng-message="required">You did not include a picture URL</p>
+    </div>
+    <input ng-disabled="postForm.$invalid" value='Add Post' type="submit">
+  </form>
+</div>

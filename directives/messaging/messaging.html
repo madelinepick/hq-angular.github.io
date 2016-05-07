@@ -1,0 +1,24 @@
+<div class='messageContent'>
+  <div class='post collapse blueback'>
+    <h2>Messaging</h2>
+    <ul>
+      <li><img class='plus' src="http://www.km4city.org/png/512/android-add.png" alt="">Send a Message</li>
+      <li><input type="text" placeholder="Search" ng-model="messagesearch"></li>
+    </ul>
+  </div>
+  <div class='post collapse fill'>
+    <div class='message' ng-repeat='message in messages | orderBy:"-time"| filter: messagesearch'>
+      <h3 ng-click='showMessage(message.id)'>{{ message.subject }}</h3>
+      <i class="fa fa-angle-down fa-lg" ng-hide='message.messageShowing' ng-click='showMessage(message.id)'></i>
+      <i class="fa fa-angle-up fa-lg" ng-hide='!message.messageShowing' ng-click='showMessage(message.id)'></i>
+      <div class='messageText' ng-hide='!message.messageShowing'>
+        <h4 class='inline'>From {{ message.from }}</h4>
+        <h6 class='inline'>{{ message.time | amCalendar }}</h6>
+        <p class='fromMessage'>{{ message.frommessage }}</p>
+        <p class='toMessage'>{{ message.tomessage }}</p>
+        <button>Reply</button>
+        <button class='delete'>Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
