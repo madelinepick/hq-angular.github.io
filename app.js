@@ -95,7 +95,7 @@ angular.module('redditClone', ['ngAnimate','ngMessages', 'angularMoment'])
           id: 4,
           subject: 'Welcome to HQ!',
           from: 'HQ Family',
-          frommessage: 'Welcome Madeline! Thank you so much for joining HQ - the official headquarters for Unreasonable Group ventures. Here, you can communicate with and learn from all the other amazing people who have gone through our program. Please never hesitate to reach out if you have questions about HQ. Now get to connecting!',
+          frommessage: 'Welcome Madeline! Thank you so much for joining HQ - the official headquarters for social entrepreneurs. Here, you can communicate with and learn from all the other amazing people who have gone through our program. Please never hesitate to reach out if you have questions about HQ. Now get to connecting!',
           time: 1462000004044
 
         }
