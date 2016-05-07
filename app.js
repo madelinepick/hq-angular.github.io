@@ -61,7 +61,7 @@ angular.module('redditClone', ['ngAnimate','ngMessages', 'angularMoment'])
       ];
       var person = {
         name: 'Madeline Pickering',
-        company: 'Unreasonable Group',
+        company: 'Galvanize, LLC',
         picture: 'madelinepickering.jpg'
       }
       var messages = [
