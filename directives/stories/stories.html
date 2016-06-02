@@ -2,7 +2,7 @@
   <div class='post blueback block'>
     <h2>Stories</h2>
     <ul>
-      <li ng-click="submitSwitch()"><img class='plus' src="http://www.km4city.org/png/512/android-add.png" alt="">Make a Post</li>
+      <li ng-click="submitSwitch()"><i class="fa fa-plus"></i>Make a Post</li>
       <li><input type="text" placeholder="Search" ng-model="search"></li>
     </ul>
   </div>
@@ -24,7 +24,7 @@
                     '1': '{} Comment',
                    'other': '{} Comments'}">
         </ng-pluralize></p>
-      <p class='inline' ng-click='showAddComment(post.id)'><img class='plus space' src="http://www.km4city.org/png/512/android-add.png" alt=""></i>Add a comment</p>
+      <p class='inline' ng-click='showAddComment(post.id)'><i class="fa fa-plus"></i>Add a comment</p>
     </div>
       <div  class='commentlist' ng-hide="!post.isShowing">
         <i class="fa fa-close closeButton" ng-click='closeComments(post.id)'></i>
